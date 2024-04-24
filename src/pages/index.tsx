@@ -51,7 +51,7 @@ export default function Home() {
           Send Emails - SMTP
         </title>
       </Head>
-      <div className="flex justify-center py-12 px-5">
+      <div className="flex justify-center py-12 px-5 h-screen items-start">
         <Formik
           initialValues={{
             email: '',
@@ -63,15 +63,15 @@ export default function Home() {
           onSubmit={handleSubmit}
         >
           {({ isSubmitting }) => (
-            <Form className="space-y-4 bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 text-black w-full max-w-3xl">
+            <Form className="space-y-4 bg-white dark:bg-gray-950 shadow-white/5 shadow-md rounded px-8 pt-6 pb-8 mb-4 text-black dark:text-white w-full max-w-3xl">
             <h2 className='text-xl mb-4'>SMTP Info:</h2>
-            <Field type="email" name="email" placeholder="Email" className="appearance-none block w-full bg-gray-50 text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" />
-            <Field type="password" name="password" placeholder="Password" className="appearance-none block w-full bg-gray-50 text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" />
+            <Field type="email" name="email" placeholder="Email" className="appearance-none block w-full bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none" />
+            <Field type="password" name="password" placeholder="Password" className="appearance-none block w-full bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none" />
             <hr className="my-4" />
             <h2 className='text-xl mb-4'>Client Info:</h2>
-            <Field type="email" name="recipient" placeholder="Recipient Email" className="appearance-none block w-full bg-gray-50 text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" />
-            <Field type="text" name="title" placeholder="Title" className="appearance-none block w-full bg-gray-50 text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" />
-            <Field as="textarea" name="body" placeholder="HTML Body" className="appearance-none block w-full bg-gray-50 text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" />
+            <Field type="email" name="recipient" placeholder="Recipient Email" className="appearance-none block w-full bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none" />
+            <Field type="text" name="title" placeholder="Title" className="appearance-none block w-full bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none" />
+            <Field as="textarea" name="body" placeholder="HTML Body" className="appearance-none block w-full bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none" />
             <button
               type="submit"
               disabled={isSubmitting}
